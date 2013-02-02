@@ -20,33 +20,33 @@ Or install it yourself as:
 
 You need to define a <tt>constant variable</tt> for the API to search the matching words to your domain:
 
-  SGCS_CONFIG = {
-    domain: 'YOUR_SITE_URL'
-  }
+    SGCS_CONFIG = {
+        domain: 'YOUR_SITE_URL'
+    }
 
 ## Usage
 
 To perform a search:
 
-  results = SimpleGoogleCustomSearch.search("simple", offset +optional+)
+    results = SimpleGoogleCustomSearch.search("simple", offset +optional+)
 
 The +results+ variable is now a SimpleGoogleCustomSearch::ResultSet object:
 
-  results.total            # number of results (integer)
-  results.item             # array of result objects (SimpleGoogleCustomSearch::Result)
+    results.total            # number of results (integer)
+    results.item             # array of result objects (SimpleGoogleCustomSearch::Result)
 
 Iterate through the results:
 
-  results.item.each do |result|
-    result.title           # result title
-    result.link            # result URL
-    result.description     # excerpt, with terms highlighted
-  end
+    results.item.each do |result|
+        result.title           # result title
+        result.link            # result URL
+        result.description     # excerpt, with terms highlighted
+    end
 
 ## TODO
 
-Unit Test
-Add Pagination
+1. Unit Test
+2. Add Pagination
 
 ## Contributing
 
