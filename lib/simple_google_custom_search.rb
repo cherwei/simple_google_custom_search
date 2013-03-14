@@ -12,7 +12,7 @@ module SimpleGoogleCustomSearch
   
   def search(query, offset=0)
     config = SimpleGoogleCustomSearch::SgcsConfig.new
-    site = config.domain + ' -"tagged with" -"posts by date" -page'
+    site = config.domain
     uri = url(site, CGI.escape(query), offset)
     return nil unless resp = fetch(uri)
     
